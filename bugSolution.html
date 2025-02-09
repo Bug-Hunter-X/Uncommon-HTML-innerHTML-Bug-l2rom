@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Correct way to add new content.  Create a new element, then append it to the existing element
+    let newParagraph = document.createElement("p");
+    newParagraph.textContent = "This text is now visible.";
+    document.getElementById("myDiv").appendChild(newParagraph);
+  </script>
+</body>
+</html>
