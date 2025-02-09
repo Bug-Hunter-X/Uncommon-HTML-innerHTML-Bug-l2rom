@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Incorrect way to modify innerHTML.  Attempting to append directly
+    // to an existing innerHTML string will not work correctly.
+    document.getElementById("myDiv").innerHTML = document.getElementById("myDiv").innerHTML + "<p>This text is not visible.</p>";
+  </script>
+</body>
+</html>
